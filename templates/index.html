@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Prediction using AI</title>
+    <link rel="stylesheet" href="/static/css/home_style.css">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <!-- WebGL Earth API Script -->
+    <script src="https://www.webglearth.com/v2/api.js"></script>
+    <script>
+        function initialize() {
+            var earth = new WE.map('earth_div');
+            WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(earth);
+        }
+    </script>
+</head>
+<body onload="initialize()">
+    <!-- Header Section -->
+    <header>
+        <h1>Disaster Prediction using AI</h1>
+        <p>Predict and Prepare for Natural Disasters with Advanced AI Technology</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#earthquake">Earthquake</a></li>
+            <li><a href="#flood">Flood</a></li>
+            <li><a href="#weather">Daily Weather Update</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Earthquake Prediction -->
+        <section id="earthquake">
+            <h2>Earthquake Prediction</h2>
+            <p>Predict earthquakes in real-time using our advanced AI algorithms.</p>
+            <a href="/predict"><button>Predict Earthquake</button></a>
+        </section>
+
+        <!-- Flood Prediction -->
+        <section id="flood">
+            <h2>Flood Prediction</h2>
+            <p>Stay informed about flood risks in your area with AI-based flood prediction.</p>
+            <a href="/predict_flood"><button>Predict Flood</button></a>
+        </section>
+
+        <!-- Daily Weather Update -->
+        <section id="weather">
+            <h2>Daily Weather Update</h2>
+            <p>Get your daily weather updates and forecasts.</p>
+            <a href="/weather"><button>Get Weather Update</button></a>
+        </section>
+
+        <!-- WebGL Earth Div for 3D Globe Map -->
+        <div id="earth_div" style="width: 100%; height: 600px;"></div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Disaster Prediction using AI. All rights reserved.</p>
+    </footer>
+</body>
+<script src="/static/js/earth.js"></script>
+</html>

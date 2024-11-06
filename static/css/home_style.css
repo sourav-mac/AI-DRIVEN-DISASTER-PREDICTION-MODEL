@@ -1,0 +1,131 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #121212; /* Dark background color */
+    color: #E0E0E0; /* Light text color */
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(to right, #333, #444); /* Darker gradient */
+    color: #ffffff; /* White text for contrast */
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #222; /* Darker navbar background */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #E0E0E0; /* Light text color for links */
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #444; /* Darker hover effect */
+    border-radius: 4px;
+}
+
+/* Main Content Sections */
+main {
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+section {
+    background-color: #1E1E1E; /* Darker section background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: scale(1.05);
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #FFFFFF; /* White text for section titles */
+}
+
+section p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #CCCCCC; /* Light grey for paragraph text */
+}
+
+/* Buttons */
+button {
+    background-color: #007bff; /* Button background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+/* Footer Section */
+footer {
+    background-color: #222; /* Darker footer background */
+    color: #E0E0E0; /* Light text color */
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* WebGL Earth Div */
+#earth_div {
+    border-radius: 8px;
+    margin: 20px 0;
+}

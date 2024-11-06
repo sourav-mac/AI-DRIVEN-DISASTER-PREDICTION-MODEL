@@ -1,0 +1,93 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2e;
+    color: #dcdfe4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    background-color: #282a36;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    font-size: 1.8rem;
+    color: #ff79c6;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Label */
+label {
+    font-size: 0.9rem;
+    color: #dcdfe4;
+    display: block;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+/* Input Fields */
+input[type="number"] {
+    background-color: #44475a;
+    border: 1px solid #6272a4;
+    border-radius: 5px;
+    color: #f8f8f2;
+    padding: 0.8rem;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 0.3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #50fa7b;
+}
+
+/* Button */
+button {
+    background-color: #6272a4;
+    border: none;
+    border-radius: 5px;
+    color: #f8f8f2;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #50fa7b;
+    color: #282a36;
+}
+
+/* Result */
+.result {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #8be9fd;
+    padding: 1rem;
+    border: 1px solid #6272a4;
+    background-color: #44475a;
+    border-radius: 5px;
+}

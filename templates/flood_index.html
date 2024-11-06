@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Prediction</title>
+    <link rel="stylesheet" href="/static/css/flood.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Flood Prediction</h2>
+        <form id="floodForm">
+            <label>Latitude:</label>
+            <input type="number" name="latitude" step="0.0001" required>
+            <label>Longitude:</label>
+            <input type="number" name="longitude" step="0.0001" required>
+            <label>Rainfall (mm):</label>
+            <input type="number" name="rainfall" required>
+            <label>Temperature (°C):</label>
+            <input type="number" name="temperature" required>
+            <label>Humidity (%):</label>
+            <input type="number" name="humidity" required>
+            <label>River Discharge (m³/s):</label>
+            <input type="number" name="river_discharge" required>
+            <label>Water Level (m):</label>
+            <input type="number" name="water_level" step="0.1" required>
+            <label>Elevation (m):</label>
+            <input type="number" name="elevation" required>
+            <button type="submit">Predict Flood Risk</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById("floodForm").onsubmit = async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch("/predict_flood", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+            const result = await response.json();
+            document.getElementById("result").innerText = result.flood_result;
+        };
+    </script>
+</body>
+</html>
